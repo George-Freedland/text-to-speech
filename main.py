@@ -20,11 +20,17 @@ def text_to_speech(text):
     input_text = texttospeech.SynthesisInput(text=text)
 
     voice = texttospeech.VoiceSelectionParams(
-        language_code="en-US", 
+        language_code="en-US",
+        name="en-US-Neural2-J",
         ssml_gender=texttospeech.SsmlVoiceGender.MALE
     )
 
-    audio_config = texttospeech.AudioConfig(audio_encoding=texttospeech.AudioEncoding.MP3)
+    audio_config = texttospeech.AudioConfig(
+        audio_encoding=texttospeech.AudioEncoding.MP3,
+        speaking_rate=1.0,  # Normal rate; adjust between 0.25 and 4.0
+        pitch=0.0,          # Neutral pitch; adjust between -20.0 and 20.0
+        volume_gain_db=0.0  # Normal volume; adjust between -96.0 and 16.0
+    )
 
     response = client.synthesize_speech(
         input=input_text, voice=voice, audio_config=audio_config
