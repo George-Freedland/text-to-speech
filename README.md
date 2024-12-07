@@ -20,4 +20,4 @@ Create a .env with path, in this example it's in same folder as the code.
 GOOGLE_APPLICATION_CREDENTIALS=service_account.json   
 
 # Usage:  
-python main.py "Hello this is a test" "test.mp3" 
+python main.py "Hello this is a test"
