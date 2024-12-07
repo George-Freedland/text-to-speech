@@ -3,9 +3,9 @@
 # Requirements:  
 Create python virtual environment and install requirements.  
 
-python3 -m venv venv  
+python3 -m venv venv  or on windows: python -m venv venv/  
 
-source venv/bin/activate   
+source venv/bin/activate   or on windows: venv\Scripts\activate
 
 pip install -r requirements.txt  
 
